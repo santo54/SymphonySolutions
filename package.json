@@ -1,0 +1,14 @@
+{
+  "name": "symphonysolutions",
+  "version": "1.0.0",
+  "description": "Symphony Solutions BV - Technical Task",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "Santiago Agost",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.2"
+  }
+}
