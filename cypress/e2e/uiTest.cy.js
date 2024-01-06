@@ -15,12 +15,11 @@ describe("Testing Login", () => {
     cy.get(".active_option").should("have.text", "Name (A to Z)");
     cy.get("[data-test='product_sort_container']").select("Name (Z to A)");
     cy.get(".active_option").should("have.text", "Name (Z to A)");
-    cy.get(".inventory_item_name").then((elements) => {
-      const items = elements
+    cy.get(".inventory_item_name").then((inventory) => {
+      const items = inventory
         .map((index, element) => Cypress.$(element).text())
-        .get()
-        .reverse();
-      const sortedItems = [...items].sort();
+        .get();
+      const sortedItems = [...items].sort().reverse();
       expect(items).to.deep.equal(sortedItems);
     });
   });
