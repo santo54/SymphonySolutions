@@ -7,7 +7,7 @@ describe("API test using Cypress", () => {
     });
   });
   it("Read the response, find all objects with property with Category: Authentication and Authorization", () => {
-    cy.request("GET", "https://api.publicapis.org/entries").then((response) => {
+    cy.api("GET", "https://api.publicapis.org/entries").then((response) => {
       const category = "Authentication & Authorization";
       const filteredObjects = response.body.entries.filter(
         (entry) => entry.Category === category
